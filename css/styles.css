@@ -1,5 +1,9 @@
+/* Metodología BEM*/
+
 html {
      box-sizing: border-box;
+     margin: 0;
+     padding: 0;
 }
 
 *, *:after, *:before {
@@ -11,9 +15,12 @@ html {
      --dark-cyan: hsl(185, 75%, 39%);
      --very-dark-blue: hsl(229, 23%, 23%);
      --dark-grayish-blue: hsl(227, 10%, 46%);
+     --titulo: #442C2E;
+     --parrafo: #8D93AB;
 }
 
 body{
+     font-family: 'Kumbh Sans', sans-serif;
      background-color: var(--dark-cyan);
      background-image: url('../img/bg-pattern-top.svg'), url('../img/bg-pattern-bottom.svg');
      background-repeat: no-repeat, no-repeat;
@@ -28,7 +35,71 @@ main{
 }
 
 .card{
-     background-color: blue;
-     height: 200px;
-     width: 200px;
+     background-color: white;
+     height: 370px;
+     width: 350px;
+     border-radius: 6%;
+     box-shadow: 0px 30px 60px rgba(2, 2, 2, 0.329); 
+     overflow: hidden;
 }
+
+.card-header{
+     width: 100%;  
+}
+
+.card-body{
+     display: flex;
+     justify-content: center;
+     padding: 20px 0;
+     position: relative;
+     border-bottom: 0.5px solid rgb(228, 228, 228); 
+}
+
+.card-body-img{
+     position: absolute;
+     top: -55px;
+     border-radius: 100%;
+     border: 5px solid white;
+}
+
+.card-body-info{   
+     text-align: center;
+     margin-top: 50px; 
+     width: 100%;
+}
+
+footer{
+     display: flex;
+     justify-content: space-around;
+}
+
+.card-social{
+     text-align: center;
+     padding: 10px;
+}
+
+.card-texto{
+     margin: 5px;
+     font-size: 18px;
+     letter-spacing: 0.1px;   
+}
+.card-texto_primary{
+     color: var(--titulo);
+     font-weight: 700;
+     font-size: 18px;
+}
+
+span{
+     font-size: 18px !important;
+}
+
+p.card-texto_secundary{
+     font-size: 16px !important;
+}
+
+.card-texto_secundary{
+     color: var(--parrafo);
+     font-weight: 400;
+     font-size: 14px;     
+}
+
